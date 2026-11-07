@@ -1,0 +1,25 @@
+# Entornos
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Datos (creditcard.csv pesa ~150 MB; se descarga desde Kaggle)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+
+# Modelos pesados (descomentar si no se versionan)
+# models/*.joblib
+# models/*.keras
+
+# Pruebas y registros
+.pytest_cache/
+*.log
+
+# Sistema / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.env

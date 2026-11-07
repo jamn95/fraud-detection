@@ -1,0 +1,19 @@
+# Levanta la app web y la API con una sola orden:
+#   docker compose up --build
+# App: http://localhost:8501   ·   API: http://localhost:8000/docs
+services:
+  app:
+    build: .
+    image: deteccion-fraude
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+
+  api:
+    image: deteccion-fraude
+    depends_on:
+      - app
+    command: ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

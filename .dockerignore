@@ -1,0 +1,11 @@
+.venv/
+**/__pycache__/
+**/.ipynb_checkpoints/
+.vscode/
+.git/
+data/raw/
+data/processed/
+notebooks/
+docs/
+tests/
+*.log

@@ -1,0 +1,63 @@
+{
+  "fecha": "2026-11-07T11:41:04",
+  "random_state": 42,
+  "features": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount_log",
+    "Hour_sin",
+    "Hour_cos"
+  ],
+  "limpieza": {
+    "filas_originales": 284807,
+    "duplicados_eliminados": 1081,
+    "fraudes_duplicados_eliminados": 19,
+    "filas_finales": 283726,
+    "fraudes_finales": 473,
+    "nulos": 0
+  },
+  "splits": {
+    "train": {
+      "Filas": 170235,
+      "Fraudes": 284,
+      "% fraude": 0.1668
+    },
+    "val": {
+      "Filas": 56745,
+      "Fraudes": 94,
+      "% fraude": 0.1657
+    },
+    "test": {
+      "Filas": 56746,
+      "Fraudes": 95,
+      "% fraude": 0.1674
+    }
+  },
+  "preprocesador": "models\\preprocesador.joblib"
+}

@@ -1,0 +1,49 @@
+# =============================================================
+# Detección de Fraude Financiero con ML — dependencias
+# Probado para Python 3.11 (TensorFlow 2.18 no soporta 3.13+)
+# Versiones fijadas para reproducibilidad y compatibilidad mutua:
+#   - scikit-learn 1.6.x <-> imbalanced-learn 0.13.x (API compatible)
+#   - tensorflow 2.18 exige numpy < 2.1
+# =============================================================
+
+# --- Núcleo de datos ---
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+pyarrow==18.1.0              # guardar train/val/test en Parquet
+
+# --- Machine Learning ---
+scikit-learn==1.6.1
+imbalanced-learn==0.13.0     # SMOTE + imblearn.Pipeline (evita fuga de datos)
+xgboost==2.1.4
+joblib==1.4.2
+
+# --- Deep Learning (DNN + Autoencoder) ---
+tensorflow==2.18.0           # backend de Keras 3; modelos se guardan en formato .keras
+keras==3.15.1                # fijado: verificado entrenar/guardar/cargar con TF 2.18
+
+# --- Interpretabilidad ---
+shap==0.46.0
+
+# --- Visualización ---
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.24.1
+
+# --- Notebooks ---
+ipykernel==6.29.5
+nbformat==5.10.4
+nbclient==0.10.2             # ejecutar notebooks desde la terminal
+
+# --- Despliegue: app web ---
+streamlit==1.40.1            # st.fragment(run_every=...) para el monitoreo en tiempo real
+
+# --- Despliegue: API opcional ---
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+
+# --- Pruebas ---
+pytest==8.3.4
+httpx==0.28.1                # cliente de pruebas de FastAPI
+python-multipart==0.0.20

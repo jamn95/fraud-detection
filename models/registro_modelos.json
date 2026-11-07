@@ -1,0 +1,76 @@
+{
+  "Regresión Logística": {
+    "archivo": "logistica.joblib",
+    "tipo": "pipeline",
+    "balanceo": "SMOTE",
+    "params": {
+      "modelo__C": 0.03148911647956861,
+      "smote__sampling_strategy": 0.05
+    },
+    "pr_auc_cv": 0.7340929939304774,
+    "pr_auc_val": 0.8016147727126472
+  },
+  "Random Forest": {
+    "archivo": "random_forest.joblib",
+    "tipo": "pipeline",
+    "balanceo": "SMOTE",
+    "params": {
+      "modelo__max_depth": null,
+      "modelo__max_features": 0.3,
+      "modelo__max_samples": 0.5,
+      "modelo__min_samples_leaf": 3,
+      "modelo__n_estimators": 299,
+      "smote__sampling_strategy": 0.05
+    },
+    "pr_auc_cv": 0.8348363737681006,
+    "pr_auc_val": 0.8796163253148556
+  },
+  "XGBoost": {
+    "archivo": "xgboost.joblib",
+    "tipo": "pipeline",
+    "balanceo": "Sin balanceo",
+    "params": {
+      "modelo__colsample_bytree": 0.9330880728874675,
+      "modelo__gamma": 1.2022300234864176,
+      "modelo__learning_rate": 0.08341106432362087,
+      "modelo__max_depth": 7,
+      "modelo__min_child_weight": 2,
+      "modelo__n_estimators": 543,
+      "modelo__reg_lambda": 4.622589001020832,
+      "modelo__subsample": 0.6849356442713105
+    },
+    "pr_auc_cv": 0.8372374756444431,
+    "pr_auc_val": 0.8892025848212268
+  },
+  "Stacking (RF + XGB)": {
+    "archivo": "stacking.joblib",
+    "tipo": "pipeline",
+    "pr_auc_val": 0.8891705226036614
+  },
+  "DNN": {
+    "archivo": "dnn.keras",
+    "tipo": "dnn",
+    "balanceo": "Sin balanceo",
+    "params": {
+      "capas": [
+        32,
+        16
+      ],
+      "dropout": 0.4,
+      "lr": 0.001
+    },
+    "pr_auc_val": 0.8734239375640843
+  },
+  "Autoencoder": {
+    "archivo": "autoencoder.keras",
+    "tipo": "autoencoder",
+    "params": {
+      "capas": [
+        28,
+        14,
+        7
+      ]
+    },
+    "pr_auc_val": 0.583345675086566
+  }
+}

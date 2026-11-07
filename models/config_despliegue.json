@@ -1,0 +1,151 @@
+{
+  "fecha_evaluacion": "2026-11-07T12:43:40",
+  "mejor_modelo": "XGBoost",
+  "features": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount_log",
+    "Hour_sin",
+    "Hour_cos"
+  ],
+  "costo_revision": 5.0,
+  "precision_minima": 0.7,
+  "umbrales": {
+    "Regresión Logística": {
+      "negocio": 0.8481532953253541,
+      "f1": 0.9513982271470989
+    },
+    "Random Forest": {
+      "negocio": 0.338513298295907,
+      "f1": 0.7165233317407228
+    },
+    "XGBoost": {
+      "negocio": 0.058919407427310944,
+      "f1": 0.5488833785057068
+    },
+    "Stacking (RF + XGB)": {
+      "negocio": 0.004556060419784719,
+      "f1": 0.9137785466153908
+    },
+    "DNN": {
+      "negocio": 0.06827544420957565,
+      "f1": 0.553396999835968
+    },
+    "Autoencoder": {
+      "negocio": 15.365955352783203,
+      "f1": 7.479875087738037
+    }
+  },
+  "metricas_prueba": {
+    "Regresión Logística": {
+      "Umbral": 0.848153,
+      "Precision": 0.787234,
+      "Recall": 0.778947,
+      "F1": 0.783069,
+      "ROC-AUC": 0.956245,
+      "PR-AUC": 0.695237,
+      "TP": 74,
+      "FP": 20,
+      "FN": 21,
+      "Alertas": 94,
+      "Costo total (€)": 4278.38,
+      "Ahorro vs. sin modelo (%)": 71.026072
+    },
+    "Random Forest": {
+      "Umbral": 0.338513,
+      "Precision": 0.745098,
+      "Recall": 0.8,
+      "F1": 0.771574,
+      "ROC-AUC": 0.967092,
+      "PR-AUC": 0.812616,
+      "TP": 76,
+      "FP": 26,
+      "FN": 19,
+      "Alertas": 102,
+      "Costo total (€)": 4296.58,
+      "Ahorro vs. sin modelo (%)": 70.902819
+    },
+    "XGBoost": {
+      "Umbral": 0.058919,
+      "Precision": 0.829787,
+      "Recall": 0.821053,
+      "F1": 0.825397,
+      "ROC-AUC": 0.972184,
+      "PR-AUC": 0.829105,
+      "TP": 78,
+      "FP": 16,
+      "FN": 17,
+      "Alertas": 94,
+      "Costo total (€)": 4247.55,
+      "Ahorro vs. sin modelo (%)": 71.234858
+    },
+    "Stacking (RF + XGB)": {
+      "Umbral": 0.004556,
+      "Precision": 0.75,
+      "Recall": 0.821053,
+      "F1": 0.78392,
+      "ROC-AUC": 0.971409,
+      "PR-AUC": 0.816735,
+      "TP": 78,
+      "FP": 26,
+      "FN": 17,
+      "Alertas": 104,
+      "Costo total (€)": 4301.79,
+      "Ahorro vs. sin modelo (%)": 70.867536
+    },
+    "DNN": {
+      "Umbral": 0.068275,
+      "Precision": 0.811111,
+      "Recall": 0.768421,
+      "F1": 0.789189,
+      "ROC-AUC": 0.944298,
+      "PR-AUC": 0.779858,
+      "TP": 73,
+      "FP": 17,
+      "FN": 22,
+      "Alertas": 90,
+      "Costo total (€)": 4501.56,
+      "Ahorro vs. sin modelo (%)": 69.514659
+    },
+    "Autoencoder": {
+      "Umbral": 15.365955,
+      "Precision": 0.735294,
+      "Recall": 0.263158,
+      "F1": 0.387597,
+      "ROC-AUC": 0.946358,
+      "PR-AUC": 0.493419,
+      "TP": 25,
+      "FP": 9,
+      "FN": 70,
+      "Alertas": 34,
+      "Costo total (€)": 13393.18,
+      "Ahorro vs. sin modelo (%)": 9.299073
+    }
+  }
+}
