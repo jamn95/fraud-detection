@@ -116,7 +116,7 @@ Los mejores hiperparámetros fueron los siguientes:
 - **XGBoost:** sin balanceo, 543 árboles, profundidad máxima 7 y tasa de aprendizaje 0,083.
 - **Random Forest:** SMOTE con proporción 0,05, 299 árboles y `max_features` = 0,3.
 - **DNN:** arquitectura 32-16 con *dropout* 0,4.
-- ***Autoencoder*:** arquitectura 31-28-14-7-14-28-31.
+- **Autoencoder:** arquitectura 31-28-14-7-14-28-31.
 
 En validación, XGBoost y el *Stacking* empataron en el mejor PR-AUC (0,889). Les siguieron Random Forest (0,880), la DNN (0,873), la Regresión Logística (0,802) y el *autoencoder* (0,583).
 
