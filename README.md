@@ -2,6 +2,8 @@
 
 Proyecto final de **Minería de Datos**. Sistema inteligente para detectar transacciones fraudulentas con tarjeta de crédito usando machine learning y aprendizaje profundo, desarrollado con la metodología **CRISP-DM**.
 
+**Aplicación desplegada:** https://deteccion-fraude-mineria.streamlit.app/
+
 ## Dataset
 
 **Credit Card Fraud Detection** — Kaggle ([mlg-ulb/creditcardfraud](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)).
