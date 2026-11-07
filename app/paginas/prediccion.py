@@ -93,6 +93,7 @@ with tab_individual:
         explicacion = det.explicar(transaccion, top=10).iloc[::-1]
         colores = [COLOR_FRAUDE if v > 0 else COLOR_LEGITIMA for v in explicacion["Contribución"]]
         fig = go.Figure(go.Bar(
+            name="Contribución SHAP", showlegend=False,
             x=explicacion["Contribución"], orientation="h", marker_color=colores,
             y=[f"{v} = {x:.3f}" for v, x in zip(explicacion["Variable"], explicacion["Valor"])],
             hovertemplate="%{y}<br>Contribución %{x:+.3f} (log-odds)<extra></extra>",

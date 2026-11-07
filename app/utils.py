@@ -80,10 +80,11 @@ def momento(time_segundos) -> pd.Series | pd.Timestamp:
 # ----------------------------------------------------------------------
 def estilo(fig: go.Figure, alto: int = 380, titulo: str | None = None) -> go.Figure:
     """Estilo común: fondo limpio, rejilla tenue, leyenda arriba y tooltip claro."""
+    if titulo:   # sin título no se pasa la clave: Plotly mostraría "undefined"
+        fig.update_layout(title=dict(text=titulo, x=0, xanchor="left", font=dict(size=15)))
     fig.update_layout(
         template="plotly_white",
         height=alto,
-        title=dict(text=titulo, x=0, xanchor="left", font=dict(size=15)) if titulo else None,
         margin=dict(l=10, r=10, t=60 if titulo else 30, b=10),
         font=dict(size=13, color="#0b0b0b"),
         legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0, title=None),

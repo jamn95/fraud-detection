@@ -25,7 +25,8 @@ INTERVALO_S = 1.0          # cada cuánto se actualiza el panel
 VENTANA_GRAFICO = 300      # transacciones visibles en el gráfico
 
 det = detector()
-flujo = datos_demo()
+# Orden cronológico (por Time), como llegarían las transacciones en la realidad
+flujo = datos_demo().sort_values("Time", kind="stable")
 
 st.title("🚨 Alertas en tiempo real")
 st.caption(
