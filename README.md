@@ -104,7 +104,7 @@ python -m src.train_models
 python -m src.evaluate
 
 # 4. Aplicación web  ->  http://localhost:8501
-streamlit run app/app.py
+streamlit run app/app.py --server.address localhost
 
 # 5. API REST  ->  http://localhost:8000/docs
 uvicorn app.api:app --port 8000

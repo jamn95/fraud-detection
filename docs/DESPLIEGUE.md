@@ -5,7 +5,7 @@
 Desde la raíz del proyecto, con el entorno `.venv` activo:
 
 ```powershell
-streamlit run app/app.py                      # app web   -> http://localhost:8501
+streamlit run app/app.py --server.address localhost   # app web -> http://localhost:8501
 uvicorn app.api:app --port 8000               # API REST  -> http://localhost:8000/docs
 python -m pytest                              # pruebas (predictor, API y páginas)
 ```
@@ -125,6 +125,6 @@ La respuesta es una lista con un resultado por transacción: `puntaje`, `umbral`
 ## 8. Seguridad y limitaciones
 
 - La API no tiene autenticación: está pensada para una red interna. Antes de exponerla a Internet, agregar autenticación (por ejemplo, una clave en cabecera o OAuth2), HTTPS y límite de peticiones.
-- En local la app solo escucha en `localhost` (`.streamlit/config.toml`); en Docker se abre en `0.0.0.0` para poder publicar el puerto.
+- En local, ejecutar la app con `--server.address localhost` para que solo sea accesible desde el propio equipo; en Docker se abre en `0.0.0.0` para poder publicar el puerto.
 - Las fechas que muestra la app son ilustrativas: el dataset solo contiene segundos desde la primera transacción.
 - La columna "clase real" de las páginas de demostración existe porque se usan datos de prueba etiquetados; en producción no se conoce al momento de clasificar.
